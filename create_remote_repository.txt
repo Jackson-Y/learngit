@@ -7,13 +7,13 @@
 		你需要把邮件地址换成你自己的邮件地址，然后一路回车，使用默认值即可，
 		由于这个Key也不是用于军事目的，所以也无需设置密码.
 
-	成功后生成.ssh目录，里边有id_rsa he id_rsa.pub文件
+	成功后生成.ssh目录，里边有id_rsa 和 id_rsa.pub文件
 	[root@CentOS7 learngit]$ ll ~/.ssh/*
 	-rw-------. 1 root root 1679 6月  29 15:18 /root/.ssh/id_rsa
 	-rw-r--r--. 1 root root  398 6月  29 15:18 /root/.ssh/id_rsa.pub
 
 
-3、登录到Github，在“Account Settings”--> “SSH Keys”页面：
+3、登录到Github，在“Settings”--> “SSH and GPG Keys”页面：
 	a. “Add SSH Key”， 填写title，粘贴id_rsa.pub里的内容到“key”下的输入区。
 	b. 点最下边的“Add Key”，即完成。
 	
