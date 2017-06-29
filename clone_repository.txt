@@ -1,0 +1,13 @@
+克隆远程仓库
+
+1、选择一个目录
+	cd /home/moxiao/code/python/
+
+2、复制远程仓库地址
+	在github的learnpython仓库首页，点绿色按钮“clone and download”， git@github.com:Jackson-Y/learnpython.git
+
+3、在本地：
+	git clone git@github.com:Jackson-Y/learnpython.git
+	本地即克隆了远程仓库的代码
+
+
