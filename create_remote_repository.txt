@@ -2,12 +2,14 @@
 1、注册Github账号，或者自己搭建Git服务器。
 	Git和GitHub之间的通信时SSH加密的；
 	以下使用Github服务器作为远程仓库。
+
 2、创建SSH key
 	$ ssh-keygen -t rsa -C "your_email@example.com"
 		你需要把邮件地址换成你自己的邮件地址，然后一路回车，使用默认值即可，
 		由于这个Key也不是用于军事目的，所以也无需设置密码.
 
-	成功后生成.ssh目录，里边有id_rsa 和 id_rsa.pub文件
+	成功后生成.ssh目录，里边有 id_rsa 和 id_rsa.pub 文件
+
 	[root@CentOS7 learngit]$ ll ~/.ssh/*
 	-rw-------. 1 root root 1679 6月  29 15:18 /root/.ssh/id_rsa
 	-rw-r--r--. 1 root root  398 6月  29 15:18 /root/.ssh/id_rsa.pub
