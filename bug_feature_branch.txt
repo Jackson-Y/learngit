@@ -1,0 +1,21 @@
+BUG分支
+	假设：当前正在dev分支做开发，突然被告知master分支有bug需要解决。
+
+1、git stash 保存现场
+	2、git checkout master 切换到master分支（有bug的分支）
+	3、git checkout -b issue-101 从master创建一个分支issue-101来解决BUG
+	4、git add readme.txt
+	5、git commit -m "fix bug 101"
+	6、git checkout master
+	7、git merge --no-ff -m "merge fix bug 101" issue-101
+8、git checkout dev 切换回dev分支，重新开始开发。
+9、git status 查看工作区
+10、git stash list 查看刚才保存的工作现场
+11、git stash apply 恢复现场，stash内容保留。
+	或者
+11、git stash pop 恢复现场，同时把stash内容也删了
+
+
+Feature分支
+	开发一个新feature，最好新建一个分支；
+	如果要丢弃一个没有被合并过的分支，可以通过git branch -D <name>强行删除。
