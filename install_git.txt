@@ -1,3 +1,4 @@
+安装Git客户端
 1、CentOS7 自带有git
 		可以在命令行，输入
 			git --version
