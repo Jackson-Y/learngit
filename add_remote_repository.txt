@@ -1,0 +1,15 @@
+添加远程仓库
+1、在Github创建版本库
+	复制github上的版本库地址 git@github.com:Jackson-Y/learngit.git
+
+2、在本地的learngit目录下，执行
+	git remote add origin git@github.com:Jackson-Y/learngit.git
+	添加远程库，并设置其名字为origin（任意）
+
+3、把本地库的所有内容推送到远程库
+	git push -u  origin master
+	
+	[ 第一次使用git push 或者 git clone时会有警告信息，因为把git地址作为可信任的连接]
+
+	-u  选项是把本地和远程库关联起来，方便后续使用
+	以后再更新或者拉取时不需要-u，直接git push origin master
