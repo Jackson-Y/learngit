@@ -13,7 +13,6 @@ Git本地常用操作
 	f. 再次查看状态
 		git status
 
-
 2. 回退
 	a.查看历史
 		git log
