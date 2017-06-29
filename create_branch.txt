@@ -15,7 +15,9 @@
 	git branch
 	列出所有分支，*号标识当前分支
 
-	在dev分支修改readme.txt，任意添加一行
+	在dev分支修改readme.txt，任意添加一行,
+		git add readme.txt
+		git commit -m "test branch"
 
 3、切换到master主分支
 	git checkout master
