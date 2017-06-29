@@ -1,0 +1,41 @@
+1、更新文件
+	a. 查看当前版本库状态，哪些文件被修改过，还没有准备提交的修改。
+		git status
+	b. 对比修改前后的内容变化
+		git diff readme.txt
+	c. 添加到版本库
+		git add readme.txt
+	d. 再次查看状态
+		git status
+	e. 提交
+		git commit -m "修改readme.txt"
+	f. 再次查看状态
+		git status
+
+[root@CentOS7 learngit]$ git status
+位于分支 master
+尚未暂存以备提交的变更：
+  （使用 "git add <file>..." 更新要提交的内容）
+  （使用 "git checkout -- <file>..." 丢弃工作区的改动）
+
+修改：      readme.txt
+
+未跟踪的文件:
+  （使用 "git add <file>..." 以包含要提交的内容）
+
+del_redo_back_update.txt
+修改尚未加入提交（使用 "git add" 和/或 "git commit -a"）
+[root@CentOS7 learngit]$ git diff readme.txt
+diff --git a/readme.txt b/readme.txt
+index d416c4b..cdcb166 100644
+--- a/readme.txt
++++ b/readme.txt
+@@ -1,6 +1,6 @@
+-Learn Git
++Learn Git From www.liaoxuefeng.com
+ 
+-       Git is a version control system.
++       Git is a distributed version control system.
+ 
+        Git is free software.
+
