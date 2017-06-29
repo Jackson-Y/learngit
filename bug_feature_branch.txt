@@ -12,8 +12,7 @@ BUG分支
 9、git status 查看工作区
 10、git stash list 查看刚才保存的工作现场
 11、git stash apply 恢复现场，stash内容保留。
-	或者
-11、git stash pop 恢复现场，同时把stash内容也删了
+	或者 git stash pop 恢复现场，同时把stash内容也删了
 
 
 Feature分支
