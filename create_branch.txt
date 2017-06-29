@@ -1,0 +1,35 @@
+创建分支
+
+开发过程中，自己写了一天的代码，还未调通，此时上传代码会导致其他人编译出错，但是又怕新写的代码丢失，那么：
+	需要自己创建一个分支
+	然后把自己写的代码提交到自己的分支上
+	代码调通后再合并到master主分支
+
+1、创建dev分支并切换到dev分支
+	git checkout -b dev
+	相当于以下两条命令：
+		git branch dev
+		git checkout dev
+
+2、查看当前分支
+	git branch
+	列出所有分支，*号标识当前分支
+
+	在dev分支修改readme.txt，任意添加一行
+
+3、切换到master主分支
+	git checkout master
+	此时发现，master中的readme.txt并未改变
+
+
+4、合并分支
+	git merge dev
+	此时，master与dev中的readme.txt一致
+
+	fast-forward 表示"快进模式"
+
+5、删除分支dev
+	git branch -d dev
+
+
+
