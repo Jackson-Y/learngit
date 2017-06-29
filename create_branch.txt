@@ -34,4 +34,14 @@
 	git branch -d dev
 
 
+6、有冲突时
+	git merge dev
+	会提示冲突，需要先解决冲突，此时不能切换branch
 
+	git status会给出冲突的文件，文件中会有
+	<<<<<<<
+	=======
+	>>>>>>>
+	标识不一样的地方
+
+	git log --graph 可以看到分支合并图
