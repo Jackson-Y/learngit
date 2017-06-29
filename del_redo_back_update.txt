@@ -29,6 +29,20 @@
 		记录了所有的git命令，且记录了commit id
 		所以，版本回退多了，可以用git reflog查看命令历史，重返未来。
 
-3. 
+3. 删除文件
+	rm file1.txt
+	git rm file1.txt
+	git commit -m "rm file1.txt"
+
+	本地删除file1.txt后恢复：
+	rm file1.txt
+	git checkout -- file1.txt
+
+4. 撤销修改
+	a. 从工作区恢复到暂存区 [ 适用于：修改之后执行了git add ]
+		git reset HEAD readme.txt
+		git checkout -- readme.txt
+	b. 从暂存区恢复到本地 [ 适用于：修改之后还没有执行git add ]
+		git checkout -- readme.txt
 
 
