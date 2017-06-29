@@ -13,50 +13,22 @@
 		git status
 
 
+2. 回退
+	a.查看历史
+		git log
+		git log --pretty=oneline [ git log单行模式，信息精简 ]
+		第一行的一长串字符是sha1计算出来的commit id，保证分布式各主机id唯一。
+	b.回到上一版本
+		git reset --hard HEAD^ 回到上一版本
+		git reset --hard HEAD^^ 回到上上版本
+		git reset --hard HEAD~100 往前回退100个版本
+		git reset --hard [commit id] 回到git log中记录的指定版本
+
+		回退之后，git log中就没有回退版本之后的新版本了，不过Git使用
+			git reflog
+		记录了所有的git命令，且记录了commit id
+		所以，版本回退多了，可以用git reflog查看命令历史，重返未来。
+
+3. 
 
 
-
-[root@CentOS7 learngit]$ git status
-位于分支 master
-尚未暂存以备提交的变更：
-  （使用 "git add <file>..." 更新要提交的内容）
-  （使用 "git checkout -- <file>..." 丢弃工作区的改动）
-
-修改：      readme.txt
-
-未跟踪的文件:
-  （使用 "git add <file>..." 以包含要提交的内容）
-
-del_redo_back_update.txt
-修改尚未加入提交（使用 "git add" 和/或 "git commit -a"）
-[root@CentOS7 learngit]$ git diff readme.txt
-diff --git a/readme.txt b/readme.txt
-index d416c4b..cdcb166 100644
---- a/readme.txt
-+++ b/readme.txt
-@@ -1,6 +1,6 @@
--Learn Git
-+Learn Git From www.liaoxuefeng.com
- 
--       Git is a version control system.
-+       Git is a distributed version control system.
- 
-        Git is free software.
-[root@CentOS7 learngit]# git status
-# 位于分支 master
-# 要提交的变更：
-#   （使用 "git reset HEAD <file>..." 撤出暂存区）
-#
-#	修改：      readme.txt
-#
-# 未跟踪的文件:
-#   （使用 "git add <file>..." 以包含要提交的内容）
-
-[root@CentOS7 learngit]# git commit -m "修改、回退、撤销、删除"
-[master fa9f1cc] 修改、回退、撤销、删除
- 1 file changed, 41 insertions(+)
-	 create mode 100644 del_redo_back_update.txt
-	 [root@CentOS7 learngit]# git status
-# 位于分支 master
-	 无文件要提交，干净的工作区
-	 
