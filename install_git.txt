@@ -1,0 +1,19 @@
+1、CentOS7 自带有git
+		可以在命令行，输入
+			git --version
+		进行查看。
+	A、如果没有安装，则yum install git进行安装。
+	B、源码安装，./config,make,sudo make install.
+
+2、Mac OS
+	A. 安装homebrew，通过homebrew安装git。参考http://brew.sh/。
+	B. AppStore中安装Xcode，Xcode集成了Git。
+	“Xcode”->"Preferences"->"Downloads"->"Command Line Tools"->"Install".
+
+3、wimdows
+	百度一下，下载安装github客户端,成功后会生成Github、Git shell两个应用程序。
+
+4、设置用户名、密码
+	$ git config --global user.name "your name"
+	$ git config --global user.email "your e-mail"
+
