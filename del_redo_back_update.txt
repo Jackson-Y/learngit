@@ -45,4 +45,3 @@ Git本地常用操作
 	b. 从暂存区恢复到本地 [ 适用于：修改之后还没有执行git add ]
 		git checkout -- readme.txt
 
-
