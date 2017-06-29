@@ -11,5 +11,7 @@
 	
 	[ 第一次使用git push 或者 git clone时会有警告信息，因为把git地址作为可信任的连接]
 
-	-u  选项是把本地和远程库关联起来，方便后续使用
-	以后再更新或者拉取时不需要-u，直接git push origin master
+	-u  选项是第一次推送，把本地和远程库关联起来，方便后续使用
+	以后再更新或者拉取时不需要-u，直接:
+	
+	git push origin master
