@@ -1,7 +1,7 @@
 使用GitHub
 1、从github上Fork任意开源仓库
-	在github上选择需要的项目，点fork，就在自己的账号下生成了同样的项目
-2、从自己fork的项目上，clone仓库到本地
+	在github上选择需要的项目，点fork，就在自己的账号下生成了自己的分支
+2、从自己fork的分支项目上，clone仓库到本地
 	git clone git@github.com:michaelliao/bootstrap.git
 
 3、可以pull request给官方的开源仓库
