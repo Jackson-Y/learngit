@@ -1,0 +1,40 @@
+创建标签和操作标签
+1、创建标签
+	a. 切换到需要打标签的分支dev
+		git checkout dev
+	b. 在最新提交的commit上打标签v1.0
+	（以后再需要发布版本1.0时，就可以从这里发布了）
+			git tag v1.0
+		
+	c. 如果需要在指定的commit上打标签，则需要找出commit id；
+				git log --pretty=oneline --abbrev-commit
+		找出 commit id(e.g.6224937) 后，创建标签
+			git tag v0.9 6224937
+
+	d. 创建带有说明的标签，-a指定标签名，-m指定说明
+			git tag -a v0.1 -m "version 0.1 released" 3244129
+
+	e. 创建带PGP签名的标签，-s用私钥签名给标签(必须先安装gpg [GnuPG],具体参考GNUPG官网帮助文档)
+			git tag -s v0.2 -m "signed version 0.2 released" 4223920
+
+2、查看标签
+		git tag
+   查看标签v0.9的详细信息
+		git show v0.9
+
+
+3、操作标签
+	a. 删除标签
+		git tag -d v0.1
+	b. 推送标签到远程仓库
+		git push origin v1.0
+	
+		一次性推送所有未推送到远程的本地标签：
+		git push origin --tags
+	
+	c. 删除已推送到远程的标签
+		1) git tag -d v1.0
+		2) git push origin :refs/tags/v1.0
+		删除后可登陆远程查看是否成功。
+
+
